@@ -1,4 +1,4 @@
-# 💰 Segment Manager App
+# 💰 Smart and Easy Finance
 
 A desktop budgeting app built with [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) and MySQL that helps users manage financial segments and transactions visually. 
 
