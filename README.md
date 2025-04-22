@@ -111,13 +111,21 @@ pgsql
 
 ### 📌 TODOs & Ideas
 
- Edit transactions
+ Edit transactions that will add only to a certain segment
 
  Add charts over time
 
  Mobile version with Kivy or web via Streamlit
 
  Sync with external bank APIs
+
+ Add a new to segment creation, that uses money instead of percentage
+
+ Config
+
+ Goals of money for the user to add to
+
+ Fix reccuring transactions
 
 ### 📄 License
 MIT License
