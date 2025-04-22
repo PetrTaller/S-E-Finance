@@ -121,7 +121,7 @@ pgsql
 MIT License
 
 ### 🙌 Credits
-Created with 💙 by [PETR TALLET] — feel free to fork, improve, and share!
+Created with 💙 by [PETR TALLER] — feel free to fork, improve, and share!
 
 
 
