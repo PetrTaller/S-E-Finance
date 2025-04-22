@@ -11,6 +11,7 @@ app.minsize(1000, 500)
 app.resizable(True, True)
 icon_path = os.path.join(os.path.dirname(__file__), "assets", "icons", "main.ico")
 app.iconbitmap(icon_path)
+ctk.set_appearance_mode("dark")
 
 content_frame = ctk.CTkFrame(app)
 content_frame.pack(fill="both", expand=True, padx=0, pady=0)
