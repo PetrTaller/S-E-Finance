@@ -58,31 +58,29 @@ Create a database (e.g. segment_app)
 Import the SQL schema:
 
 ```
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) UNIQUE,
-    password VARCHAR(255),
-    balance DECIMAL(10, 2)
+create table user(
+id INT AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(255) NOT NULL,
+password VARCHAR(255) NOT NULL,
+balance FLOAT NOT NULL
 );
-
-CREATE TABLE segments (
+CREATE TABLE segment (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    name VARCHAR(255),
-    color VARCHAR(7),
-    percentage DECIMAL(5, 2),
-    parent_id INT,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (parent_id) REFERENCES segments(id)
+    user_id INT NOT NULL,
+    parent_id INT DEFAULT NULL,
+    name VARCHAR(255) NOT NULL,
+    color VARCHAR(7) NOT NULL,
+    percentage DECIMAL(5, 2) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id),
+    FOREIGN KEY (parent_id) REFERENCES segment(id)
 );
-
-CREATE TABLE transactions (
+CREATE TABLE transaction(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    amount DECIMAL(10, 2),
-    source VARCHAR(255),
-    date DATETIME,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    user_id INT NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    source VARCHAR(255) NOT NULL,
+    date datetime NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id)
 );
 ```
 Update your database credentials in the classes currently no config.
