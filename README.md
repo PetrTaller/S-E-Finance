@@ -105,6 +105,8 @@ pgsql
 │   ├── users.json      # (Optional) cached user data
 │   └── session.json    # current session tracking
 
+### SCREENSHOT
+![image](https://github.com/user-attachments/assets/ab5277e5-2c9f-4c1c-9658-9ed2ac343eac)
 
 
 ### 📌 TODOs & Ideas
